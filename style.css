@@ -1,0 +1,1448 @@
+body, html 
+      {
+           height: 100%;  
+           width: 100%;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center; /* Horizontal centering */
+           box-sizing: border-box; /* Ensures padding and border are included in width/height */
+           background-color: black;
+           overflow-x: hidden;
+           -webkit-font-smoothing: antialiased;
+           text-rendering: optimizeLegibility;  /* For better legibility */
+      }
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Extralight';
+           src: url('Fonts/ClashDisplay-Extralight.otf') format('opentype');
+           font-style: normal;
+      } 
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Light';
+           src: url('Fonts/ClashDisplay-Light.otf') format('opentype');
+           font-style: normal;
+      } 
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Regular';
+           src: url('Fonts/ClashDisplay-Regular.otf') format('opentype');
+           font-style: normal;
+      } 
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Medium';
+           src: url('Fonts/ClashDisplay-Medium.otf') format('opentype');
+           font-style: normal;
+      } 
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Semibold';
+           src: url('Fonts/ClashDisplay-Semibold.otf') format('opentype');
+           font-style: normal;
+      }       
+
+@font-face 
+      {
+           font-family: 'ClashDisplay-Bold';
+           src: url('Fonts/ClashDisplay-Bold.otf') format('opentype');
+           font-style: normal;
+      } 
+
+@font-face 
+      {
+           font-family: 'fat-frank-heavy';
+           src: url('Fonts/fat-frank-heavy.otf') format('opentype');
+           font-style: normal;
+      }           
+
+@font-face
+      {
+           font-family: 'Conamore-Black';
+           src: url('Fonts/Conamore-Black.ttf') format('truetype');
+           font-style: normal;
+      }
+
+.rectangle 
+      {   
+           width: 1440px; /*1440px*/
+           height: 90px;
+           background-color: #03182c;
+           display: flex;
+           justify-content: center; /* Horizontal centering */
+           position: fixed; /* Enables positioning child elements */
+           z-index: 9999; /* Ensure it is on top of the background */
+           overflow: visible;
+      }
+
+.gemhunters 
+      {
+           width: 285px; 
+           height: 40px;
+           position: absolute; /* Position relative to the rectangle */
+           top: 50%; /* Vertically center the image */
+           left: 19.3%; /* Horizontally center the image */
+           transform: translate(-50%, -50%); /* Adjust for center alignment */
+           opacity: 40%;
+      }
+
+.text-effects      /* GEM HUNTERS LOGO*/
+      {
+          font-family: 'fat-frank-heavy';
+          font-size: 67.5px;
+          font-weight: 900;
+          fill:  #e4e2e4;
+          stroke: #062746;
+          stroke-width: 17px;
+          paint-order: stroke fill;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+          letter-spacing: 1px;
+          word-spacing: -4px;
+          transform: scaleY(1) scaleX(1.04); /* Shrinks the height and weight of the text */
+      }
+
+.second-word {
+           
+             transform: scaleY(1) scaleX(1.12); /* Shrinks the height and weight of the text */
+             fill: url(#gradient1); /* Apply gradient fill to the second word only */
+           
+        }
+
+
+
+/* Button on the Top Head Rectangle */
+.button 
+      {
+           position: absolute; /* Position relative to the rectangle */
+           top: 50%; /* Vertically center the button */
+           left: 81.9%; /* Horizontally center the button */
+           transform: translate(-50%, -50%); /* Adjust for center alignment */
+           height:50px; /* Height of the button*/
+           width:260px; /* Width of the Button*/
+           max-height: 90px;
+           padding: 10.5px; /* Add padding for the button */
+           background-color: #3588e1; /* Blue button background */
+           color: white; /* White button text */
+           border: none; /* Remove border */
+           border-radius: 5px; /* Rounded corners */
+           cursor: pointer; /* Pointer cursor on hover */
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+           font-size: 11.5px;
+           font-family: 'ClashDisplay-Medium', sans-serif;
+           word-spacing: 0.5px; 
+           letter-spacing: 0.5px; 
+           
+           
+      }
+
+.button span 
+      {
+           display: inline-block;
+           transform-origin: center; /* Anchor scaling at the center */
+           transform: scaleY(1.4) scaleX(1.3); /* Shrinks the height and weight of the text */
+      }
+
+.button:hover 
+      {
+           background-color: #0056b3; /* Darker blue on hover */
+      }   
+
+
+/* Background Image 1 Starts here*/
+
+.bgimage1 
+      {
+           max-width: 1440px; /* Prevent the image from overflowing */ /*1440px*/
+           max-height: 708px; /* Ensure it fits within the viewport */    
+           margin-top: 90px;
+           display: flex; 
+           position: relative;
+           z-index: 0;
+         
+      }
+/* Background Image 1 ends here*/
+      
+/* Background Image 1 elements Starts here*/
+.textdiscover
+      {
+           position: absolute; 
+           color: #D5EDFF;
+           font-size: 68px;
+           font-family: 'fat-frank-heavy' , sans-serif;
+           top: 4%; /* Vertically center the image */
+           left: 9.1%; /* Horizontally center the image - 19.2% */
+           letter-spacing: 1px;
+           word-spacing: -1px;
+           z-index: 1;
+      } 
+
+.textdiscover-second-line
+      {
+           position: absolute; 
+           color:#047cf0;
+           font-size: 68px;
+           font-family: 'fat-frank-heavy' , sans-serif;
+           top: 14%; /* Vertically center the image */
+           left: 9.1%; /* Horizontally center the image - 19.2% */
+           letter-spacing: 1px;
+           word-spacing: -1px;
+           z-index: 1;
+      }
+
+.third-line    /*textdiscover-third-line*/
+      {
+           top: 25.1%; /* Vertically center the image */   
+      }
+
+
+
+.bg1-text1
+      {
+           font-family: 'ClashDisplay-Regular', Arial, sans-serif;
+           position: absolute; 
+           color: #D5EDFF;
+           font-size: 20px;
+           top: 42.8%; /* Vertically center the image */
+           left: 9.1%; /* Horizontally center the image - 19.2% */
+           word-spacing: -1.5px;
+           z-index: 10;
+      }
+
+
+      .bg1-text1 span 
+            {
+                   font-family: Arial, sans-serif; /* Fallback font for problematic characters */
+            }
+
+      .bg1-text1 p 
+            {
+                   margin-bottom: 20px;  /* Adjust this value to increase or decrease the space between paragraphs */
+                   line-height: 1.6;      /* Adds line spacing for better readability */
+            }
+
+
+.bg1-text2-list 
+      {
+           font-family: 'ClashDisplay-Light', Arial, sans-serif;
+           position: absolute; 
+           color: #D5EDFF;
+           font-size: 19px;
+           top: 58.5%; /* Vertically center the image */
+           left: 6%; /* Horizontally center the image - 19.2% */
+           letter-spacing: 1px; 
+           word-spacing: -1.5px;
+           z-index: 10;
+           display: flex;          /* Aligns the text and icon horizontally */
+           align-items: center;    /* Vertically centers the text and icon */
+           padding-left: 5px;
+          transform: scaleX(1) scaleY(1);
+      }
+
+     .bg1-text2-list span 
+            {
+                   line-height: 2.3;      /* Adds line spacing for better readability */
+            }
+
+     li span 
+            {
+                   font-family: 'Arial', sans-serif; /* Fallback font for problematic characters */
+            }
+      
+
+      .bg1-text2-list .tick-list 
+            {
+                   list-style: none; /* Remove default bullets */
+                   padding-left: 40px; /* Space for tick icons */
+                   margin: o;
+            }
+ 
+      .bg1-text2-list .tick-list li 
+            {
+                   position: relative;
+                   font-size: 16px; /* Adjust text size */
+                   color: #D5EDFF; /* Text color */
+                   padding-left: 30px;
+            }
+ 
+      .bg1-text2-list .tick-list li::before 
+            {
+                   content: ''; /* Empty content for graphical tick */
+                   position: absolute;
+                   left: 0; /* Adjust to align with the text */
+                   top: 50%; /* Vertically center */
+                   transform: translateY(-50%) rotate(135deg); /* Rotate to form a tick shape */
+ 
+                   /* Circle background */
+                   width: 18px;
+                   height: 18px;
+                   border-radius: 50%; /* Make it circular */
+                   background: linear-gradient(to bottom, #1C3250, #142438); /* Gradient for a 3D effect */
+                   box-shadow:  0 0 0 0.4px lightslategrey,  /* Simulates the border */
+                   inset 0 2px 4px rgba(0, 0, 0, 0.6), /* Inner shadow for bulge */
+                   0 4px 6px rgba(0, 0, 0, 0.4); /* Outer shadow for depth */
+                   background: linear-gradient(to bottom, #1C3250, #142438); /* Gradient for 3D effect */
+ 
+                   /* Tick styling */
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+            }
+ 
+      .bg1-text2-list .tick-list li::after 
+            {
+                   content: ''; /* Empty content for tick shape */
+                   position: absolute;
+                   left: 3px; /* Adjust for tick inside the circle */
+                   top: 46.5%; /* Vertically center inside the circle */
+                   transform: translateY(-50%) rotate(135deg) scaleY(-1); /* Correct orientation and flip vertically */ 
+                   /* Tick creation using borders */
+                   width: 8px;
+                   height: 4px;
+                   border-bottom: 2.4px solid skyblue;
+                   border-right: 2.4px solid skyblue;
+            }
+       
+         
+.form-box 
+      {
+           width: 380px; /* Width of the box */
+           height: 568px; /* Height of the box */
+           padding: 20px; /* Inner spacing */
+           background-color: rgba(19, 33, 87, 0.6); /* Light background color */
+           backdrop-filter: blur(2px); /* Apply blur effect to the background */
+           border-radius: 10px; /* Curved corners */
+           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+           border: 1.5px solid  rgba(61, 86, 188, 0.6); /* Light border for box border */
+           top: 50px; /* Adjust the position */
+           left: 890px; /* Adjust the position */
+           position: absolute;
+           color: #D5EDFF;
+           z-index: 0;
+  
+      }
+
+.center-align-form-heading
+      {
+           text-align: center;
+           margin-top: 7px;
+           margin-left: 9px;
+           margin-right: 9px;
+           font-family: 'Conamore-Black' , sans-serif;
+           transform: scaleY(1.2) scaleX(1.15); /* Shrinks the height and weight of the text */
+           color: #D5EDFF;
+           z-index: 1;
+      }
+
+.left-align
+      {
+           margin-left: 9px;
+           font-size: 14px;
+           font-family: 'ClashDisplay-Regular', sans-serif;
+           z-index: 1;
+           
+           /* transform: scaleY(0.5) scaleX(1); /* Shrinks the height and weight of the text */ 
+      }
+
+
+.submit-button
+      {
+          position: absolute; /* Position relative to the form */
+          top: 91%; /* Vertically center the button */
+          left: 50.5%; /* Horizontally center the button */
+          transform: translate(-50%, -50%); /* Adjust for center alignment */
+          height:50px; /* Height of the button*/
+          width:366px; /* Width of the Button*/
+          max-height: 90px;
+          padding-left: 10.5px; /* Add padding for the button */
+          padding-right: 5px;
+          background-color: #3588e1; /* Blue button background */
+          color: #D5EDFF; /* White button text */
+          border: none; /* Remove border */
+          border-radius: 5px; /* Rounded corners */
+          cursor: pointer; /* Pointer cursor on hover */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+          font-size: 15px;
+          font-family: 'ClashDisplay-Medium', sans-serif;
+          word-spacing: -2px;
+          letter-spacing: 1px;
+          
+      }
+
+      ::placeholder 
+      {
+          font-family: 'Copperplate Gothic Light', serif;
+          color: rgb(226, 223, 223);
+      }
+
+
+input, textarea 
+      {
+           width: 90%; /* Full width of the form */
+           height: 25px;
+           padding: 10px;
+           margin-bottom: 10px; /* Space between fields */
+           margin-top: 5px; /* Space between label and input box */
+           border-radius: 4px; /* Rounded corners */
+           border: 0.8px solid  rgba(37, 101, 211, 0.6); /* Light border for inputs */
+           background-color: rgba(6, 14, 45, 0.6); /* Light background color */
+           color: #D5EDFF; /* Dark text for better readability */
+           margin-left: 9px; /* Moves the input box 20px to the right */
+      }
+
+textarea    /* Adjust the height of the text area only, which is message box*/
+      {
+          height: 55px; /* Adjust the height of the message box */
+      }
+
+input:focus, textarea:focus 
+      {
+           border-color: #0066cc; /* Highlight border on focus */
+           outline: none; /* Remove default outline */
+      }
+
+.robot1 
+      {
+           position: absolute; /* Position relative to the background */
+           max-width: 387px; /* Prevent the image from overflowing */
+           max-height: 285px; /* Ensure it fits within the viewport */    
+           display: flex;
+           top: 446.5px; /* Adjust the position */
+           left: 510px; /* Adjust the position */
+           z-index: 10; /* Ensure it is on top of the background */
+      }
+
+/* Background Image 1 elements ends here*/
+
+/* Background Image 2  and its elements Starts here*/
+
+.bgimage2 
+      {
+             position: relative;
+             max-width: 1440px; /* Prevent the image from overflowing */ /*1440px*/
+             max-height: 900px; /* Ensure it fits within the viewport */           
+             display: flex;
+             justify-content: center; /* Horizontal centering */    
+      }
+
+.bg2-text1        /* The rest of the formatting is applied as used in bg1-text1 by implementing the class bg1-text1 above*/
+      {
+            top: 37px; 
+            font-size: 50px;
+            letter-spacing: -1px;
+            word-spacing: 2px;
+      }
+
+.bg2-button                /* The rest of the formatting is applied as used in button 1 by implementing the class button above*/
+      {
+            left: 260px;
+            top: 42%;
+      }
+
+
+.bg2-text2              /* The rest of the formatting is applied as used in bg1-text2 by implementing the class bg1-text2 above*/
+      {
+            top: 197px;
+            font-size: 18.2px;
+
+      }
+
+.robot2
+      {
+             position: absolute; /* Position relative to the background */
+             max-width: 517px; /* Prevent the image from overflowing */
+             max-height: 381px; /* Ensure it fits within the viewport */    
+             display: flex;
+             top: 459px; /* Adjust the position */
+             left: 0px; /* Adjust the position */
+             z-index: 10; /* Ensure it is on top of the background */
+      }
+
+.crystal-bg2
+      {
+             position: absolute;
+             max-width: 130px;
+             max-height: 241px;
+             top: 376px;
+             left: 438px;
+             display: flex;
+             z-index: 10;
+      }
+
+.bg2-box 
+{
+     width: 250px; /* Width of the box */
+     height: 179px; /* Height of the box */
+     padding: 10px; /* Inner spacing */
+     margin: 0;
+     background-color: rgba(4, 10, 35, 0.6); /* Light background color */
+     backdrop-filter: blur(2px); /* Apply blur effect to the background */
+     border-radius: 9px; /* Curved corners */
+     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+     border: 1.6px solid  rgba(29, 37, 79, 0.6); /* Light border for box border */
+     top: 90px; /* Adjust the position */
+     left: 707px; /* Adjust the position */
+     position: absolute;
+     color: #D5EDFF;
+     z-index: 0;
+     display: flex; /* Align children horizontally */
+    justify-content: start; /* Align tick to the left */
+    align-items: start; /* Align tick to the top */
+}
+
+.bg2-box-icon
+      {
+             position: absolute;
+             width: 32px;
+             height: 33px;
+             margin-left: 6px;
+             margin-top: 7px ;
+      }
+
+.bg2-box2
+{
+       left: 1022px; /* Adjust the position */
+}
+
+.bg2-box3
+{
+       top: 318px;
+}
+
+.bg2-box4
+{
+       top: 318px;
+       left: 1022px; /* Adjust the position */
+}
+
+.bg2-box5
+{
+       top: 546px;
+}
+.bg2-box6
+{
+       top: 546px;
+       left: 1022px; /* Adjust the position */
+}
+
+
+      .bg2-box-text1
+            {
+                   position: absolute; 
+                   color: #D5EDFF;
+                   font-size: 16px;             
+                   font-family: 'fat-frank-heavy' , sans-serif;
+                   top: 0px; /* Vertically center the image */
+                   left: 8%; /* Horizontally center the image - 19.2% */
+                   letter-spacing: 1px;
+                   word-spacing: -1px;
+                   z-index: 1;
+                   display: flex;             
+                   margin-top: 22px;
+                   margin-left: 34px;
+            }
+
+      .bg2-box-text2
+            {
+                   font-family: 'ClashDisplay-Extralight', sans-serif;
+                   position: absolute; 
+                   color: white;
+                   font-size: 13px;
+                   padding-left: 1px;
+                   padding-right: 5px;
+                   top: 20%; /* Vertically center the image */
+                   left: 7%; /* Horizontally center the image - 19.2% */
+                   word-spacing: 0px;
+                   z-index: 10;
+                   line-height: 24px;
+                   margin-top: 20px;
+            }
+
+            .bg2-box-text2 p{
+                  padding-left: 2px;
+            }
+
+  
+      
+
+
+/* Background Image 2 and its elements ends here*/
+
+
+
+/* Background Image 3 and its elements starts here*/
+
+
+/*class of textdiscover from above is already apllied, the below is to add more formatting*/
+
+
+.bgimage3
+{
+             position: relative;
+             display: flex;
+             justify-content: center; /* Horizontal centering */
+}
+
+.bgimage3-hugetext1
+      {
+            position: absolute; /* Position relative to the .background-container */
+            top: 65px; /* Adjust vertical alignment */
+            left: 50.6%; /* Adjust horizontal alignment */
+            transform: translate(-50%, -50%); /* Centers the text */
+            font-size: 30px; /* Adjust text size */         
+            font-size: 48px;
+             
+      }
+
+.bgimage3-hugetext2
+{
+            position: absolute; /* Position relative to the .background-container */
+            top: 124.5px; /* Adjust vertical alignment */
+            left: 50.95%; /* Adjust horizontal alignment */
+            transform: translate(-50%, -50%); /* Centers the text */
+            font-size: 30px; /* Adjust text size */
+            font-size: 50px;
+            
+}
+
+.bg3-smalltext
+{
+      top: 182.5px; 
+      font-size: 18px;
+      left: 33.3%;
+      letter-spacing: 0px;
+      word-spacing: 2px;
+      transform: scaleX(0.98);
+}
+
+.bg3-smalltext span
+{
+      position: absolute;
+      font-size: 15px;
+      left: 51%;
+      transform: translateX(-50%) scaleX(1.2); /* Center and scale */
+      display: inline-block; /* Ensure it's treated as an inline-block element for more control */
+      font-family: 'ClashDisplay-Regular', sans-serif;
+}
+
+.bg3-polygon1
+{
+      position: relative;
+}
+
+      .polygon1
+      {
+             position: absolute;
+             z-index: 2;
+             top: 37%;
+             left: 13%;
+      }
+
+      .polygon1-no
+      {
+             top: 39%;
+             left: 30%;
+      }
+      .polygon1-hugetext
+      {
+             position: absolute;
+             top: 40.5%;
+             left: 15%;
+             z-index: 10;
+             font-size: 18px;
+      }
+      .polygon1-smalltext
+      {
+            position: absolute;
+            top: 44%; 
+            font-size: 16px;
+            left: 14.5%;
+            letter-spacing: 0px;
+            word-spacing: 2px;
+            transform: scaleX(0.98);
+            z-index: 10;
+            color: #D5EDFF; /* Text color for visibility */
+            font-family: 'ClashDisplay-Light', sans-serif;
+            line-height: 25px;
+      }
+
+      .polygon1-image
+      {
+             top: 56.7% ;
+             left: 12%;
+      } 
+
+
+.polygon2
+{
+      left: 37% ;
+}    
+      .polygon2-no
+      {
+             top: 39%;
+             left: 53.5%;
+      }
+      .polygon2-hugetext
+      {
+             position: absolute;
+             top: 40.5%;
+             left: 41%;
+             z-index: 10;
+             font-size: 18px;
+      }
+
+      .polygon2-smalltext
+      {
+            position: absolute;
+            top: 44%; 
+            font-size: 16px;
+            left: 41%;
+            letter-spacing: 0px;
+            word-spacing: 2px;
+            transform: scaleX(0.98);
+            z-index: 10;
+            color: #D5EDFF; /* Text color for visibility */
+            font-family: 'ClashDisplay-Light', sans-serif;
+            line-height: 25px;
+      }
+      .polygon2-image
+      {
+             left: 40%;
+             top: 52% ;
+      }
+      
+
+.polygon3
+{
+       left: 61%;
+}      
+
+      .polygon3-no
+      {
+             
+             top: 39%;
+             left: 77.2%;
+             z-index: 2;
+
+      }
+      .polygon3-hugetext
+      {
+             position: absolute;
+             top: 40.5%;
+             left: 65%;
+             z-index: 10;
+             font-size: 18px;
+             
+      }
+
+      .polygon3-smalltext
+      {
+            position: absolute;
+            top: 44%; 
+            font-size: 16px;
+            left: 65%;
+            letter-spacing: 0px;
+            word-spacing: 2px;
+            transform: scaleX(0.98);
+            z-index: 10;
+            color: #D5EDFF; /* Text color for visibility */
+            font-family: 'ClashDisplay-Light', sans-serif;
+            line-height: 25px;
+      }
+      .polygon3-image
+      {
+             width: 247px;
+             height: 192px;
+             top: 53.5% ;
+             left: 63%;
+             z-index: 2;
+      }
+
+.bg3-button
+{
+      top: 86.5%;
+      left: 50%;
+}
+
+/* Background Image 4 and its elements starts here*/
+.bg-image4
+{
+      position: relative;
+      height: 1759px;
+}
+
+      .bg4-box
+      {
+             width: 153px; /* Width of the box */
+             height: 34px; /* Height of the box */
+             /*padding: 10px; /* Inner spacing */
+             margin: 0;
+             background-color: rgba(4, 10, 35, 0.6); /* Light background color */
+             backdrop-filter: blur(2px); /* Apply blur effect to the background */
+             border-radius: 35px; /* Curved corners */
+             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+             border: 1.6px solid  rgba(29, 37, 79, 0.6); /* Light border for box border */
+             top: 80px; /* Adjust the position */
+             left: 44.5%; /* Adjust the position */
+             position: absolute;
+             color: #D5EDFF;
+             z-index: 10;
+             display: flex; /* Align children horizontally */
+             justify-content: center; /* Align tick to the left */
+             align-items: center;
+      }
+
+      .bg4-box-text1
+      {
+             position: absolute;
+             font-family: 'ClashDisplay-Light', sans-serif;
+             top: 8px;
+             left: 15%;
+             margin: 0;
+             
+      }
+
+      .bg4-hugetext1
+      {
+             top: 7%;
+      }
+
+      .bg4-hugetext2
+      {
+             top: 10.5%;
+             letter-spacing: 0px;
+      }
+
+      .bg4-rect1
+      {
+             position: absolute; 
+             top: 17.3%;
+             left: 9.1%;
+             margin: 0;
+             width: 375px;
+             height: 275px;
+      }
+
+            .bg4-rect1-picture
+                  {
+                        left: 11%;
+                        top: 18.75%;
+                        z-index: 2;
+                        position: absolute;
+                        width: 49px;
+                        height: 49px;
+                  }
+            .bg4-rect1-name
+                  {
+                        left: 15.7%;
+                        top: 17.8%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 18px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Medium', sans-serif;
+                        letter-spacing: 0.3px;
+                  }
+            .bg4-rect1-place
+                  {
+                        left: 15.7%;
+                        top: 19.3%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 17.1px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                  }
+            .bg4-rect1-feedback
+                  {
+                        left: 11%;
+                        top: 21.95%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 16px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                        letter-spacing: 0.1px;
+                        line-height: 1.6;
+                  }
+
+      .bg4-rect2
+      {
+             position: absolute; 
+             top: 17.3%;
+             left: 37%;
+             margin: 0;
+             width: 375px;
+             height: 249px;
+      }
+
+            .bg4-rect2-picture
+                  {
+                        left: 38.9%;
+                        top: 18.75%;
+                        z-index: 2;
+                        position: absolute;
+                        width: 49px;
+                        height: 49px;
+                  }
+            .bg4-rect2-name
+                  {
+                        left: 43.6%;
+                        top: 17.8%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 18px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Medium', sans-serif;
+                        letter-spacing: 0.3px;
+                  }
+            .bg4-rect2-place
+                  {
+                        left: 43.6%;
+                        top: 19.3%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 17.1px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                  }
+            .bg4-rect2-feedback
+                  {
+                        left: 38.9%;
+                        top: 21.95%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 16px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                        letter-spacing: 0.1px;
+                        line-height: 1.6;
+                  }
+
+      .bg4-rect3
+      {
+             position: absolute; 
+             top: 17.3%;
+             left: 64.9%;
+             margin: 0;
+             width: 375px;
+             height: 327px;
+      }
+
+            .bg4-rect3-picture
+                  {
+                        left: 66.8%;
+                        top: 18.75%;
+                        z-index: 2;
+                        position: absolute;
+                        width: 49px;
+                        height: 49px;
+                  }
+            .bg4-rect3-name
+                  {
+                        left:71.5%;
+                        top: 17.8%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 18px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Medium', sans-serif;
+                        letter-spacing: 0.3px;
+                  }
+            .bg4-rect3-place
+                  {
+                        left: 71.5%;
+                        top: 19.3%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 17.1px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                  }
+            .bg4-rect3-feedback
+                  {
+                        left: 66.8%;
+                        top: 21.95%;
+                        z-index: 2;
+                        position: absolute;
+                        font-size: 16px;
+                        color: #D5EDFF;
+                        font-family: 'ClashDisplay-Light', sans-serif;
+                        letter-spacing: 0.1px;
+                        line-height: 1.6;
+                  }
+
+      .bg4-rect4
+      {
+             position: absolute; 
+             top: 34%;
+             left: 8.4%;
+             margin: 0;
+             width: 375px;
+             height: 327px;
+      }
+
+            .bg4-rect4-picture
+                  {
+
+                  }
+            .bg4-rect4-name
+                  {
+
+                  }
+            .bg4-rect4-place
+                  {
+
+                  }
+            .bg4-rect4-feedback
+                  {
+                        
+                  }
+
+      .bg4-rect5
+      {
+             position: absolute; 
+             top: 33%;
+             left: 37%;
+             margin: 0;
+             width: 375px;
+             height: 380px;
+      }
+
+            .bg4-rect5-picture
+                  {
+
+                  }
+            .bg4-rect5-name
+                  {
+
+                  }
+            .bg4-rect5-place
+                  {
+
+                  }
+            .bg4-rect5-feedback
+                  {
+                        
+                  }
+
+      .bg4-rect6
+      {
+             position: absolute; 
+             top: 37%;
+             left: 64.9%;
+             margin: 0;
+             width: 375px;
+             height: 275px;
+      }
+
+            .bg4-rect6-picture
+                  {
+
+                  }
+            .bg4-rect6-name
+                  {
+
+                  }
+            .bg4-rect6-place
+                  {
+
+                  }
+            .bg4-rect6-feedback
+                  {
+            
+                  }
+
+      .bg4-rect7
+      {
+             position: absolute; 
+             top: 54.6%;
+             left: 9.1%;
+             margin: 0;
+             width: 375px;
+             height: 275px;
+      }
+
+            .bg4-rect7-picture
+                  {
+
+                  }
+            .bg4-rect7-name
+                  {
+
+                  }
+            .bg4-rect7-place
+                  {
+
+                  }
+            .bg4-rect7-feedback
+                  {
+            
+                  }
+
+      .bg4-rect8
+      {
+             position: absolute; 
+             top: 56%;
+             left: 37%;
+             margin: 0;
+             width: 375px;
+             height: 249px;
+      }
+            .bg4-rect8-picture
+                  {
+
+                  }
+            .bg4-rect8-name
+                  {
+
+                  }
+            .bg4-rect8-place
+                  {
+
+                  }
+            .bg4-rect8-feedback
+                  {
+            
+                  }
+
+      .bg4-rect9
+      {
+             position: absolute; 
+             top: 54.7%;
+             left: 64.9%;
+             margin: 0;
+             width: 375px;
+             height: 327px;
+      }
+
+            .bg4-rect9-picture
+                  {
+
+                  }
+            .bg4-rect9-name
+                  {
+
+                  }
+            .bg4-rect9-place
+                  {
+
+                  }
+            .bg4-rect9-feedback
+                  {
+                        
+                  }
+
+      .bg4-rect10
+      {
+             position: absolute; 
+             top: 71.85%;
+             left: 9.1%;
+             margin: 0;
+             width: 375px;
+             height: 300px;
+      }
+
+            .bg4-rect10-picture
+                  {
+
+                  }
+            .bg4-rect10-name
+                  {
+
+                  }
+            .bg4-rect10-place
+                  {
+
+                  }
+            .bg4-rect10-feedback
+                  {
+                        
+                  }
+
+      .bg4-rect11
+      {
+             position: absolute; 
+             top: 71.85%;
+             left: 37%;
+             margin: 0;
+             width: 375px;
+             height: 300px;
+      }
+
+            .bg4-rect11-picture
+                  {
+
+                  }
+            .bg4-rect11-name
+                  {
+
+                  }
+            .bg4-rect11-place
+                  {
+
+                  }
+            .bg4-rect11-feedback
+                  {
+                        
+                  }
+
+      .bg4-rect12
+      {
+             position: absolute; 
+             top: 74.6%;
+             left: 64.9%;
+             margin: 0;
+             width: 375px;
+             height: 249px;
+      }
+
+            .bg4-rect12-picture
+                  {
+
+                  }
+            .bg4-rect12-name
+                  {
+
+                  }
+            .bg4-rect12-place
+                  {
+
+                  }
+            .bg4-rect12-feedback
+                  {
+                        
+                  }
+
+
+/* Background Image 4 and its elements ends here*/
+
+/* Background Image 5 and its elements starts here*/
+.bgimage5
+{
+      position: relative;
+      
+}
+/* Background Image 5 and its elements ends here*/
+
+/* Background Image 6 and its elements starts here*/
+.bgimage6
+{
+      position: relative;
+}
+/* Background Image 6 and its elements ends here*/
+
+/* Background Image 7 and its elements starts here*/
+.bgimage7
+{
+      position: relative;
+}
+/* Background Image 7 and its elements ends here*/
+
+/* Background Image 9 and its elements starts here*/
+.bgimage8
+{
+      position: relative;
+}
+
+
+
+      .bgimage8-hugetext
+            {
+                   font-size: 49px ;
+                   top: 4.5%;
+                   left: 25.1%; 
+                   position: absolute;
+                   z-index: 2; 
+            }
+      .bgimage8-hugetext span
+            {
+                 position: absolute;
+                 color:#047cf0;  
+            }
+/*      .bg8-dd1
+            {
+                   position: absolute;
+                   width: 700.39px;
+                   height: 169px;
+                   z-index: 2;
+                   top: 21%;
+                   left: 25.1%;
+
+            }
+
+
+/*Another Try*/
+
+
+/* FAQ section */
+.section {
+      top: 17.62%;
+      left: 25.15%;
+      min-height: 100vh;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      position: absolute;
+      z-index: 2;
+  }
+  
+  .toggle-button
+  {
+      max-width: 1000px; /* Allow it to scale responsively */
+      max-height: 1000px;
+      cursor: pointer;
+      margin-top: 4px;
+  }
+  
+  .faq
+  {
+      max-width: 700px;
+      margin-top: 2rem;
+      padding-bottom: 2px;
+      border-bottom: 1.55px solid gray;
+      cursor: pointer;
+      margin-bottom: 1px;
+  }
+  
+  .question
+  {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #D5EDFF;
+      margin-bottom: 1px;
+      transition: transform 0.5s ease-in;
+  }
+  
+  .question h3{
+      font-size: 20px;
+      font-family: 'fat-frank-heavy', sans-serif;
+      margin-bottom: 1px;
+      margin-top: 1px;
+      transition: transform 0.5s ease-in;
+      color: #D5EDFF;
+  }
+  
+  .answer
+  {
+      margin-top: 12px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1.4s ease;
+      padding-right: 25px;
+      transition: transform 0.5s ease-in;
+      color: #D5EDFF;
+  }
+  
+  .answer p
+  {
+      margin-top: 1px;
+      padding-top: 0rem;
+      padding-left: 0rem;
+      padding-right: 25px;
+      line-height: 1.5;
+      font-size: 1rem;
+      font-family: 'ClashDisplay-Regular', sans-serif;
+      color: #D5EDFF;
+      transition: transform 0.5s ease-in;
+  }
+  
+  .faq.active .answer
+  {
+      max-height: 300px;
+  }
+  
+  .faq.active svg{
+      transform: rotate(180deg);
+  }
+  
+  svg {
+      transition: transform 0.3s ease-in;
+  }
+  
+/*Try end*/  
+
+
+/* Background Image 8 and its elements ends here*/
+
+/* Background Image 9 and its elements starts here*/
+.bgimage9
+{
+      position: relative;
+}
+
+      .bgimage9-hugetext1
+            {
+                   position: absolute;
+                   top: 13.2%;
+                   left: 40.7%;
+                   font-size: 58px;
+            }
+
+      .bgimage9-hugetext2
+            {
+                   position: absolute;
+                   top: 24.25%;
+                   left: 30.6%;
+                   font-size: 58px;
+            }
+
+      .bg9-smalltext
+            {
+                   font-family: 'ClashDisplay-Medium', sans-serif ;
+                   position: absolute; 
+                   font-size: 20px;
+                   top: 45.3%;
+                   left: 29.4%;
+                   word-spacing: 0.1px;
+            }
+
+      .bg9-smalltext span
+            {
+                   position: absolute;
+                   font-family: 'ClashDisplay-Medium', sans-serif ;
+                   left: 6.7%;                   
+            }
+
+      .bg9-button
+            {
+                   top: 71.5%;
+                   left: 50.2%; 
+            }
+/* Background Image 9 and its elements ends here*/
+
+
+/* End rectangle adn its elements*/
+
+.end-rectangle
+{
+      position: relative;
+      top: 0;
+}
+
+.end-rect-text
+{
+      font-family: 'ClashDisplay-light', sans-serif;
+      top: 2px; 
+      font-size: 11.5px;
+      color: #D5EDFF;
+      left: 12%;
+      letter-spacing: 0.6px;
+      word-spacing: 1px;
+      position: absolute;
+      display: inline-block; /* Ensure it's treated as an inline-block element for more control */
+      z-index: 10;
+      line-height: 19px;
+      text-align: justify;     
+}
