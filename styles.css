@@ -11,147 +11,9 @@ body, html
             text-rendering: optimizeLegibility;  /* For better legibility */
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Horizontal centering */
-           
+            justify-content: center; /* Horizontal centering */           
       }
-
-@media only screen and (min-width:455px)
-            {
-                  body 
-                        {
-                              background-color: black;
-                        }
-
-                  .boxes
-                        {
-                              flex-direction: column;
-                        }
-            }
-@media screen and (orientation:landscape)
-            {
-                  body 
-                        {
-                              background-color: black;
-                        }
-            }
-
-
-      #name
-      {
-            scroll-margin-top: 200px; /* Adjust the margin to align the form correctly */
-      }
-
-/* Add these media queries at the end of your CSS file */
-
-@media only screen and (max-width: 768px) {
-      /* General responsive adjustments */
-      body, html {
-            width: 100%;
-            overflow-x: hidden;
-      }
-
-      /* Header adjustments */
-      .rectangle {
-            width: 100%;
-            height: 70px;
-      }
-
-      .gemhunters {
-            width: 200px;
-            height: 30px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-      }
-
-      .button {
-            display: none; /* Hide top button on mobile */
-      }
-
-      /* Text adjustments */
-      .textdiscover, .textdiscover-second-line, .third-line {
-            font-size: 36px;
-            left: 5%;
-            width: 90%;
-      }
-
-      /* Form adjustments */
-      .form-box {
-            width: 90%;
-            left: 5%;
-            margin: 20px auto;
-            position: relative;
-      }
-
-      /* Image adjustments */
-      .bgimage1, .bgimage2, .bgimage3, .bgimage4, .bgimage5, .bgimage6, .bgimage7, .bgimage8, .bgimage9 {
-            width: 100%;
-            height: auto;
-      }
-
-      /* Box adjustments */
-      .bg2-box, .bg2-box2, .bg2-box3, .bg2-box4, .bg2-box5, .bg2-box6 {
-            width: 90%;
-            left: 5%;
-            margin: 10px auto;
-      }
-
-      /* Robot images */
-      .robot1, .robot2, .bg6-robot {
-            width: 80%;
-            height: auto;
-            position: relative;
-            left: 10%;
-      }
-
-      /* Button adjustments */
-      .submit-button, .bg3-button, .bg4-button, .bg5-button, .bg6-button, .bg9-button {
-            width: 90%;
-            left: 5%;
-            position: relative;
-            transform: none;
-      }
-
-      /* FAQ section */
-      .section {
-            width: 90%;
-            left: 5%;
-      }
-
-      .faq {
-            width: 100%;
-      }
-
-      /* Footer */
-      .end-rectangle {
-            width: 100%;
-      }
-
-      .end-rect-text {
-            width: 90%;
-            left: 5%;
-      }
-}
-
-/* Additional breakpoint for very small screens */
-@media only screen and (max-width: 480px) {
-      .textdiscover, .textdiscover-second-line, .third-line {
-            font-size: 28px;
-      }
-
-      .bg1-text1, .bg1-text2-list {
-            font-size: 16px;
-            left: 5%;
-            width: 90%;
-      }
-
-      .form-box {
-            padding: 10px;
-      }
-}
-      
-
-
-
+  
 @font-face 
       {
            font-family: 'ClashDisplay-Extralight';
@@ -226,7 +88,7 @@ body, html
            justify-content: center; /* Horizontal centering */
            position: fixed; /* Enables positioning child elements */
            z-index: 9999; /* Ensure it is on top of the background */
-           overflow: visible;
+           overflow: visible; /* Allow overflow for child elements */
       }
 
 .gemhunters 
@@ -312,8 +174,7 @@ body, html
            margin-top: 90px;
            display: flex; 
            position: relative;
-           z-index: 0;
-         
+           z-index: 0;         
       }
 /* Background Image 1 ends here*/
       
@@ -920,7 +781,7 @@ input:focus, textarea:focus
 }
 
 /* Background Image 4 and its elements starts here*/
-.bg-image4
+.bgimage4
 {
       position: relative;
       max-width: 1440px;
@@ -1866,7 +1727,6 @@ input:focus, textarea:focus
       display: flex;
       max-width: 1440px;
       max-height: 676px;
-      border: 1px solid red;
 }
 
       .bgimage7-hugetext
@@ -2003,9 +1863,10 @@ input:focus, textarea:focus
 .bgimage8
 {
       position: relative;
-      display: flex;
+      /*display: flex;*/
       max-width: 1440px;
       max-height: 892px;
+      z-index: 0;
 }
 
       .bgimage8-hugetext
@@ -2027,9 +1888,9 @@ input:focus, textarea:focus
 .section {
       top: 4.5%;
       left: 25.15%;
-      max-width: 1440px;
+      max-width: 1430px;
       min-height: 100vh;
-      width: 80%;
+      /*width: 80%;*/
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -2122,9 +1983,11 @@ input:focus, textarea:focus
 .bgimage9
 {
       position: relative;
-      display: flex;
+      /*display: flex;*/
       max-width: 1440px;
       max-height: 532px;
+      z-index: 0;
+      border: 2px solid white;
 }
 
       .bgimage9-hugetext1
@@ -2133,6 +1996,7 @@ input:focus, textarea:focus
                    top: 13.2%;
                    left: 40.7%;
                    font-size: 58px;
+                   z-index: 2;
             }
 
       .bgimage9-hugetext2
@@ -2194,3 +2058,57 @@ input:focus, textarea:focus
       line-height: 19px;
       text-align: justify;     
 }
+
+
+
+@media only screen and (min-width:455px)
+            {
+                  body 
+                        {
+                              background-color: black;
+                        }
+
+                  .boxes
+                        {
+                              flex-direction: column;
+                        }
+            }
+@media screen and (orientation:portrait)
+            {
+                  body 
+                        {
+                              background-color: black;
+                        }
+            }
+
+
+      #name
+      {
+            scroll-margin-top: 200px; /* Adjust the margin to align the form correctly */
+      }
+
+/* Add these media queries at the end of your CSS file */
+
+
+/* Additional breakpoint for very small screens */
+@media only screen and (max-width: 480px) {
+      .textdiscover, .textdiscover-second-line, .third-line {
+            font-size: 28px;
+      }
+
+      .bg1-text1, .bg1-text2-list {
+            font-size: 16px;
+            left: 5%;
+            width: 90%;
+      }
+
+      .form-box {
+            padding: 10px;
+      }
+}
+
+.bgimage1, .bgimage2, .bgimage3, .bgimage4, .bgimage5, .bgimage6, .bgimage7, .bgimage8, .bgimage9, .end-rectangle, .rectangle
+      {
+             border: 2px solid white;
+      }
+
